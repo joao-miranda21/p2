@@ -1,0 +1,262 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Espaço para o header fixo */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #33333365;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3); /* Adiciona um leve sombreamento */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left; /* Mantém o h1 alinhado à esquerda */
+}
+
+header nav {
+    text-align: center; /* Centraliza o menu */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Banner */
+#banner {
+    text-align: center; /* Centraliza o banner */
+}
+
+#banner img {
+    width: 30%;
+    display: inline;
+}
+
+/* Seções gerais */
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center; /* Centraliza todo o conteúdo das seções */
+    transition: transform 0.3s;
+}
+
+#galeria .personagem img {
+    width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+#galeria .personagem img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#galeria .personagem h3 {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Episódios */
+#episodios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os elementos dos episódios */
+}
+
+#episodios .episodio {
+    text-align: center;
+    max-width: 300px;
+    background-color: #ffffff4d;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#episodios .episodio img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+#episodios .episodio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#episodios .episodio h3 {
+    margin: 10px 0;
+}
+
+/* Contato */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato form label {
+    font-weight: bold;
+}
+
+#contato form input,
+#contato form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contato form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contato form button:hover {
+    background-color: #555;
+}
+
+/* Mensagem de sucesso */
+#mensagem-sucesso {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+}
+
+/* Modal (trailer) */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 2000;
+}
+
+.modal button {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #555;
+}
+/* Fundo da página */
+
+/* Fundo do corpo */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    background: url('https://steamuserimages-a.akamaihd.net/ugc/1809879238907537039/BB45E890E59E9D1E88E7547451CB7325ED7FB980/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true') no-repeat center center fixed; /* Imagem padrão (modo claro) */
+    background-size: cover;
+    color: #000000;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background: url('https://c.tenor.com/mi6fQ_EpxxkAAAAd/jinx-arcane.gif') no-repeat center center fixed; /* Imagem para modo escuro */
+    background-size: cover;
+    color: #fff;
+}
+
+/* Para sobrepor a legibilidade do texto (opcional) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 238, 238, 0); /* Adiciona um filtro escuro */
+    z-index: -1;
+}
+.theme-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-button:hover {
+    background-color: #555;
+    color: #ffcc00;
+}
+/* Tema escuro */
+.dark-theme {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-theme header {
+    background-color: #1e1e1e52;
+}
+
+.dark-theme .theme-button {
+    background-color: #fff;
+    color: #121212;
+}
+
+.dark-theme .theme-button:hover {
+    background-color: #ffcc00;
+    color: #1e1e1e;
+}
+.texto1{font-size: 40px;}
+.texto2{font-size: 20px;}
